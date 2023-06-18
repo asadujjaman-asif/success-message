@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Success Message</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="all.min.js">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+</head>
+<body>
+  <button class="alt-btn">Seccess message</button>
+  <div class="success hide">
+    <span class="check"><i class="fa fa-check-circle"></i></span>
+    <span class="message">Success! Data has been saved successfully.</span>
+    <span class="crose"><i class="fa fa-times"></i></span>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+  integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $('button').click(function(){
+      $(".success").addClass('show');
+      $(".success").addClass('alert');
+      $(".success").removeClass('hide');
+      setTimeout(function(){
+        $(".success").removeClass('show');
+        $(".success").addClass('hide');
+      },5000);
+    });
+    $('.crose').click(function(){
+      $(".success").removeClass('show');
+      $(".success").addClass('hide');
+    });
+  </script>
+</body>
+</html>
+
